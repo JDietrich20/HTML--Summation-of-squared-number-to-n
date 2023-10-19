@@ -1,0 +1,37 @@
+<!-- Homework 1 | Problem 1 -->
+<!DOCTYPE html>
+<html>
+    <title>Problem 1</title> <!-- Name of tab -->
+    <h1>Summation of squared numbers up to number 'n'...</h1> <!-- Title of page -->
+    <body>
+       <label>Input number for n: </label> <!-- Asking for user input-->
+       <input id = "maxNum"></input> <!-- takes in input for 'maxNum' also known as 'n' -->
+       <button onclick = "sum()">Calculate</button> <!-- once button is clicked, problem is calculated in respect to n -->
+       <h2></h2><!-- meant to seperate 'input' from 'output' -->
+
+       <body> 
+        1^2 + 2^2 + 3^2 + ... + n^2 <!-- problem we must solve-->
+        </body>
+
+        <label> = </label>
+        <input readonly id = "sum"/> <!-- outputs the sum -->
+        
+    </body>
+    <script type = "text/javascript">
+        function sum() //function for calculating the problem
+        {
+            let calculation = document.getElementById("sum");//grabs sum from html code to store answer we calculate in function
+            var ans = 0;
+            let maxNum = document.getElementById("maxNum");//grabs maxNum (n) from html code
+            let n = parseInt(maxNum.value);//
+            for(let i = 1; i <= n; ++i){//for-loop to calculate till maxNum 'n'
+                ans += (i**2);
+            }
+        
+            calculation.value = ans;//feeds answer from function back into variable in html code
+            
+           
+        }
+        
+    </script>
+</html>
